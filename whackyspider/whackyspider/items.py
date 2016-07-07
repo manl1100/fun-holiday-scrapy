@@ -8,7 +8,8 @@
 import scrapy
 
 
-class WhackyspiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class WhackyHolidayItem(scrapy.Item):
+    day = scrapy.Field()
+    date = scrapy.Field()
+    holiday = scrapy.Field()
+    

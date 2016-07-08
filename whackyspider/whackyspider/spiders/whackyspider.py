@@ -1,7 +1,6 @@
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
 from ..items import WhackyHolidayItem
-# import sys
 
 class HolidaySpider(Spider):
 
@@ -10,7 +9,6 @@ class HolidaySpider(Spider):
     start_urls = ["http://www.timeanddate.com/holidays/fun/"]
 
     def parse(self, response):
-        # print(sys.path)
         sel = Selector(response)
         rows = sel.xpath('//div[@class="main-content-div"]/article/section[@class="article eight columns"]//tbody//tr')
         items = []

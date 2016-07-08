@@ -15,9 +15,9 @@ class HolidaySpider(Spider):
 
         for row in rows:
             item = WhackyHolidayItem()
-            item['date'] = row.xpath('./th/text()').extract()
-            item['day'] = row.xpath('./td/text()').extract()
-            item['holiday'] = row.xpath('./td/a/text()').extract()
+            item['date'] = ''.join(row.xpath('./th/text()').extract())
+            item['day'] = ''.join(row.xpath('./td/text()').extract())
+            item['holiday'] = ''.join(row.xpath('./td/a/text()').extract())
             items.append(item)
 
         return items
